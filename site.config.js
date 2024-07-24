@@ -18,7 +18,7 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "jihee-log",
+    title: "recording",
     description: "welcome to morethan-log!",
     scheme: "system", // 'light' | 'dark' | 'system'
   },
