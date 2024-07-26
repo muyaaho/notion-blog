@@ -19,7 +19,13 @@ class MyDocument extends Document {
             href="/feed"
           ></link>
           {/* <!-- Google tag (gtag.js) --> */}
-          
+          {CONFIG.googleAnalytics.enable === true && (
+            <>
+              <meta
+                name="ok google analytics"
+              />
+            </>
+          )}
           
 
 
