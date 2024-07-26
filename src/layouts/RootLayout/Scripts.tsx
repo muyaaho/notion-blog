@@ -5,17 +5,29 @@ const Scripts: React.FC = () => (
   <>
     {CONFIG?.googleAnalytics?.enable === true && (
       <>
-        <Script
+        <Script async src={`https://www.googletagmanager.com/gtag/js?id=G-Q1TXY13P5Y`}></Script>
+        {/* <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${CONFIG.googleAnalytics.config.measurementId}`}
-        />
-        <Script strategy="lazyOnload" id="ga">
+        /> */}
+        {/* <Script strategy="lazyOnload" id="ga">
           {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${CONFIG.googleAnalytics.config.measurementId}', {
               page_path: window.location.pathname,
             });`}
-        </Script>
+        </Script> */}
+        <Script strategy="lazyOnload" id="ga"> 
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-Q1TXY13P5Y');
+          
+          `}
+          
+          </Script>
       </>
     )}
   </>
