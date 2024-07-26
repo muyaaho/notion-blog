@@ -18,6 +18,15 @@ class MyDocument extends Document {
             title="RSS 2.0"
             href="/feed"
           ></link>
+          {/* <!-- Google tag (gtag.js) --> */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1TXY13P5Y"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-Q1TXY13P5Y');
+          </script>
           {/* google search console */}
           {CONFIG.googleSearchConsole.enable === true && (
             <>
