@@ -5,16 +5,14 @@ const Scripts: React.FC = () => (
   <>
     {CONFIG?.googleAnalytics?.enable === true && (
       <>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${CONFIG.googleAnalytics.config.measurementId}`}
+        <Script async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-Q1TXY13P5Y`}
         />
-        <Script strategy="lazyOnload" id="ga">
+        <Script>
           {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${CONFIG.googleAnalytics.config.measurementId}', {
-              page_path: window.location.pathname,
-            });`}
+            gtag('config', 'G-Q1TXY13P5Y');`}
         </Script>
       </>
     )}
