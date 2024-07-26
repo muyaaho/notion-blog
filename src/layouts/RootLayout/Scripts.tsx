@@ -8,7 +8,7 @@ const Scripts: React.FC = () => (
         <Script async
           src={`https://www.googletagmanager.com/gtag/js?id=G-Q1TXY13P5Y`}
         />
-        <Script>
+        <Script strategy="lazyOnload" id="ga">
           {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
